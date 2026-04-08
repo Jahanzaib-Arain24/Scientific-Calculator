@@ -139,10 +139,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Muhammad Jahanzaib**
 
-- 🌐 Portfolio: [jahanzaib-20.netlify.app](https://jahanzaib-20.netlify.app/)
-- 💼 LinkedIn: [@jahanzaibarain](https://www.linkedin.com/in/jahanzaib-arain/)
+- 🌐 Portfolio: [Jahanzaib-Portfolio](https://jahanzaib-20.netlify.app/)
+- 💼 LinkedIn: [@Jahanzaib-Arain](https://www.linkedin.com/in/jahanzaib-arain/)
 - 📧 **Email:** [arainjhanzaib@gmail.com](mailto:arainjhanzaib@gmail.com)
-- 💻 GitHub: [@jahanzaibarain](https://github.com/Jahanzaib-Arain24)
+- 💻 GitHub: [@Jahanzaib-Arain24](https://github.com/Jahanzaib-Arain24)
 
 ---
 
