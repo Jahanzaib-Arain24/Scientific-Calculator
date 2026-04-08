@@ -1,0 +1,142 @@
+.calculator-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.calculator-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid var(--btn-border);
+  border-radius: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  padding: 20px 20px;
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all var(--transition-speed) ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  padding: 0 10px;
+}
+
+.header-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.title {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.history-btn,
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  transition: color var(--transition-speed);
+}
+
+.history-btn:hover,
+.theme-toggle:hover {
+  color: var(--text-main);
+}
+
+.history-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  z-index: 20;
+  border-radius: 40px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-overlay h3 {
+  margin: 0 0 20px 0;
+  color: var(--btn-operator-text);
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--btn-border);
+  padding-bottom: 10px;
+}
+
+.history-overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.history-overlay li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--btn-border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.close-history {
+  margin-top: 20px;
+  padding: 12px;
+  background: var(--equal-btn-bg);
+  border: none;
+  color: var(--equal-btn-text);
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.close-history:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 650px) {
+  .calculator-glass {
+    width: 95%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 32px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (max-width: 400px) {
+  .calculator-glass {
+    padding: 12px;
+    border-radius: 28px;
+  }
+
+  .header {
+    margin-bottom: 2px;
+  }
+}

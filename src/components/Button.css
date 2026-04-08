@@ -1,0 +1,116 @@
+.calc-btn {
+    border: none;
+    background: var(--btn-bg);
+    color: var(--text-main);
+    border-radius: 20px;
+    height: 60px;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 1px solid var(--btn-border);
+}
+
+.calc-btn:hover {
+    background: var(--surface-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--accent-glow);
+}
+
+.calc-btn:active {
+    transform: scale(0.95);
+    background: var(--btn-active);
+}
+
+/* Number buttons */
+.calc-btn.number {
+    font-weight: 400;
+}
+
+/* Operator buttons */
+.calc-btn.operator {
+    color: var(--btn-operator-text);
+    font-size: 1.6rem;
+}
+
+/* Scientific functions & Functions */
+.calc-btn.scientific,
+.calc-btn.function {
+    color: var(--btn-func-text);
+    font-size: 1rem;
+}
+
+/* Equal button */
+.calc-btn.equal {
+    background: var(--equal-btn-bg);
+    color: var(--equal-btn-text);
+    font-weight: 600;
+    font-size: 1.8rem;
+    border: none;
+}
+
+.calc-btn.equal:hover {
+    background: var(--equal-btn-hover);
+    box-shadow: 0 0 20px var(--equal-glow);
+}
+
+/* Mode buttons (Deg/Rad) */
+.calc-btn.mode-btn {
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    height: 32px;
+    border: none;
+}
+
+.calc-btn.mode-btn.active {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.calc-btn.has-separator {
+    position: relative;
+}
+
+.calc-btn.has-separator::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background-color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+    .calc-btn {
+        height: 50px;
+        font-size: 1.1rem;
+        border-radius: 16px;
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .calc-btn:active {
+        transform: scale(0.9);
+        background: var(--btn-active);
+        box-shadow: 0 0 15px var(--primary-glow);
+    }
+
+    .calc-btn.operator {
+        font-size: 1.3rem;
+    }
+
+    .calc-btn.scientific,
+    .calc-btn.function {
+        font-size: 0.9rem;
+    }
+
+    .calc-btn.equal {
+        font-size: 1.4rem;
+    }
+}
